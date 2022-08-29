@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+        <div class="container-range">
+            <form id="formMenu">
+                <div class="credit">
+                    <h1 style="margin-bottom: 20px;" class="title">¿Cuantos créditos has tenido con nosotros?</h1>
+                    <input class="radioColor"  id="range1" type="range" min="1" max="5" step="1">
+                    <h1 id="texto1">3 créditos</h1>
+                </div>
+
+                <h1 class="title">¿Haces parte de un tribu Fineducom?</h1>
+                <div class="container-tribu">
+                  <input type="radio" id="si" name="tribu" value="Si"><label for="si">Si</label> 
+                  <input type="radio" id="no" name="tribu" value="No"><label for="no">No</label> 
+                </div>
+                
+                <h1 class="title">¿Haz completado cursos con nosotros o aliados?</h1>
+                <div class="container-cursos">
+                  <div>
+                    <input type="radio" id="No" name="curso" value="No"><label for="noC">No</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="fP" name="curso" value="FinanzasP"><label for="fP">Finanzas Personales</label> 
+                  </div>
+                  <div>
+                    <input type="radio" id="fE" name="curso" value="FinanzasPE"><label for="fE">Finanzas Personales y empleo</label>   
+                  </div>
+                </div>
+
+                <h1 class="title">Género</h1>
+                <div class="container-genero">
+                  <div>
+                    <input type="radio" id="masculino" name="Genero" value="Masculino"><label for="masculino">Masculino</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="femenino" name="Genero" value="Femenino"><label for="femenino">Femenino</label> 
+                  </div>
+                  <div>
+                    <input type="radio" id="intersexual" name="Genero" value="Intersexual"><label for="intersexual">Intersexual</label>
+                  </div>
+                </div>
+
+
+                <h1 class="title">Actividad que realizas</h1>
+                <div class="container-activity">
+                    <input type="radio" id="docente" name="actividad" value="Docente"><label for="docente">Docente</label>
+                    <input type="radio" id="independiente" name="actividad" value="Independiente" ><label for="independiente">Independiente</label>
+                    <div>
+                      <input type="radio" id="otro" name="actividad" value="Otro"><label for="otro">Otro</label>
+                    </div>
+                </div>
+
+
+                <h1 class="title">Monto que nesecitas</h1>
+                <div class="monto">
+                  <input class="radioColor" type="range" id="range2" min="500000" max="2000000" step="50000" required="required">
+                </div>
+                <h1 id="texto2">0</h1>
+                
+                <h1 class="title">Plazo crédito en (Meses)</h1>
+                <div class="plazo">
+                  <input class="radioColor" type="range" id="range3" min="4" max="18" step="1" required="true">
+                </div>
+                <h1 id="texto3">0</h1>
+                <h1 class="title">Pagos</h1>
+                <div class="pagos">
+                    <input type="radio" id="mensuales" name="pagos" value="Mensuales"><label for="mensuales">Mensuales</label>
+                    <input type="radio" id="quincenales" name="pagos" value="Quincenales"><label for="quincenales">Quincenales</label>
+                </div>
+               <!--  <div class="cuota">
+                    <h1 class="title">Valor de la Cuota</h1>
+                    <input class="inputText" id="inputCuota" name="$" type="Number" placeholder="Valor cuota..">
+                </div> -->
+                <button class="button" id="btnSubmit">Solicitalo ya!</button>
+              </form>
+              <div><span><img class="img" src="./flecha-hacia-arriba.png" alt="icon"></span></div>
+            </div>
+          </section>
+      <div  class="containerTabla">
+          <h1>Los datos son los siguientes...</h1>
+          <table>
+              <tr>
+                <th>Pregunta</th>
+                <th>Respuesta</th>
+              </tr>
+              <tr>
+                <td>¿Cuantos créditos has tenido con nosotros?</td>
+                <td id="crédito"></td>
+              </tr>
+              <tr>
+                <td>¿Haces parte de nuestra tribu de Fineducom?</td>
+                <td id="tribu"></td>
+              </tr>
+              <tr>
+                <td>¿Haz completado cursos con nosotros o aliados?</td>
+                <td id="cursos"></td>
+              </tr>
+              <tr>
+                <td>Género</td>
+                <td id="genero"></td>
+              </tr>
+              <tr>
+                <td>Actividad que realizas</td>
+                <td id="actividad"></td>
+              </tr>
+              <tr>
+                <td>Monto que nesecitas</td>
+                <td id="monto"></td>
+              </tr>
+              <tr>
+                <td>Plazo de crédito (meses)</td>
+                <td id="plazo"></td>
+              </tr>
+              <tr>
+                <td>Tipo de pagos</td>
+                <td id="pago"></td>
+              </tr>
+          </table>
+          <table class="Total">
+              <tr>
+                <th style="text-align: center">Total</th>
+                <td style="padding: 0; text-align: center">--</td>
+              </tr>
+              <tr>
+                <td>Pago</td>
+                <td id="total-crédto"></td>
+              </tr>
+          </table>
+      </div>
+    <script src="./app.js"></script>
+</body>
+</html>
